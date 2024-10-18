@@ -5,7 +5,11 @@ fun main() {
     val kb = kotlinbasics(5,6,7) // Directly uses the secondary constructor
     println("Hello World!! My name is Aman Pandey")
     println("The sum of a + b is: " + kb.add(5, 4))
+    println("The Value of ant is:" + kotlinbasics.ant)
+    println("The Value of Product is:" + kotlinbasics.product(4,5))
 }
+// In using the companion objects in the kotlin we can't use the upper mentioned line kb = Kotlinbasics()
+// because its make object and in companion object we can't deal with object
 
 open class kotlinbasics{
     var someInt = 10
@@ -22,5 +26,11 @@ open class kotlinbasics{
     // Function to add two integers
     fun add(a: Int, b: Int): Int {
         return a + b
+    }
+    companion object{
+        var ant : Int = 7;
+        fun product(a:Int , b:Int) :Int{
+            return a*b
+        }
     }
 }
