@@ -1,0 +1,25 @@
+package com.example.myapplication
+
+fun main(){
+   val ClassC = ClassC()
+    val ClassB = ClassB()
+    println("The value of name is:" +ClassC.name )
+    println("The addition is :" + ClassC.add(4,7))
+    println("The value of name is:" +ClassB.name )
+    println("The addition is :" + ClassB.add(4,7))
+}
+ open class ClassB {
+     open var name = "Aman Pandey"
+      open var age = 20
+    open fun add(a:Int , b: Int):Int{
+         return a+b
+     }
+}
+  class ClassC:ClassB(){
+    override var name : String = "Kanishka"
+    override fun add(a:Int , b:Int):Int{
+        val sum = super.add(5,6)
+        val sqr = sum *sum
+        return sqr
+    }
+ }
