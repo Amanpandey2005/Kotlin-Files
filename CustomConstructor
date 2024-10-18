@@ -1,0 +1,26 @@
+package com.example.myapplication
+
+fun main() {
+    // Creates an instance of ClassA using the secondary constructor
+    val kb = kotlinbasics(5,6,7) // Directly uses the secondary constructor
+    println("Hello World!! My name is Aman Pandey")
+    println("The sum of a + b is: " + kb.add(5, 4))
+}
+
+open class kotlinbasics{
+    var someInt = 10
+
+    // Secondary constructor
+    constructor(a: Int, b: Int, c: Int) {
+        val sum = a + b + c
+        println("The addition is: "+ sum)
+    }
+    constructor(a:Int , b:Int){
+        val sum1 = a+b
+        println("The addition is: "+sum1)
+    }
+    // Function to add two integers
+    fun add(a: Int, b: Int): Int {
+        return a + b
+    }
+}
