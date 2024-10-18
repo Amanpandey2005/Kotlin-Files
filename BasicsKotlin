@@ -1,0 +1,84 @@
+package com.example.myapplication
+
+public class MyClass : ClassA(a = 5) {
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            println("Hello World!! My name is Aman Pandey")
+            println("The sum of a+b is ${add(5, 4)}")
+
+            var a: Int = 500
+            if (a>200) {
+                println("number is greater than 200")
+            } else {
+                println("number is less than 200")
+            }
+
+                val num: Int = 200
+                when (num) {
+                    100 -> {
+                        println("Aman's Chashmish wife is very pretty")
+                    }
+                    200 -> {
+                        println("Aman's wife is Mrs. Kanishka Aman Pandey")
+                    }
+                    else -> {
+                        println("Aman continuously prays with devotion in the name of Lord Mahadev")
+                    }
+                }
+
+                val aman: Int = 100
+                when {
+                    aman == 100 -> {
+                        println("Number is 100")
+}
+                    aman > 100 -> {
+                        println("Number is more than 100")
+                    }
+                    else -> {
+                        println("Number is less than 100")
+                    }
+                }
+            var N1 = 0
+            for(i in 0 .. 10){
+                println("The number is : ${N1++}")
+                }
+            var N2 = 0
+            for(i in 0 until 10){
+                println("The number is : ${N2++}")
+            }
+            var N3 = 0
+            for(i in 10 downTo 0 step 2){
+                println("The number is : $i")
+            }
+            val arrNo = ArrayList<Int>()
+            arrNo.add(1)
+            arrNo.add(2)
+            arrNo.add(3)
+            arrNo.add(4)
+            arrNo.add(5)
+            arrNo.add(6)
+            arrNo.add(7)
+
+            for (i in arrNo){
+                println("Number is $i")
+            }
+
+            var number = 100
+            do{
+                println("number is : $number")
+                number++
+            }
+            while(number <= 120)
+            val ame1 = Pair("Aman", Pair("Kanishka", "Khanna"))
+            println("${ame1.first} ${ame1.second.second}")
+
+            val ame2 = Triple( "Aman" , "Pandey" ,  "Kanishka" )
+            println("${ame2.third} ${ame2.first} ${ame2.second}")
+            }
+
+        fun add(a: Int, b: Int): Any {
+            return a + b
+        }
+    }
+}
