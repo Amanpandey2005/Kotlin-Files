@@ -1,0 +1,21 @@
+package com.example.myapplication
+
+
+fun main(){
+    val kb = ClassA(a = 5 )
+    println("Hello World!! My name is Aman Pandey")
+    println("The sum of a+b is"+ kb.add(5,4))
+}
+public open class ClassA(a:Int){
+    var someint = 10
+    // primary constructor
+
+    init {
+        println("my wife is the wisest thing in my life that i ever do")
+        println("value of a is" + a)
+    }
+
+    fun add(a :Int , b:Int): Int{
+        return a+b
+    }
+}
