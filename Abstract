@@ -1,0 +1,33 @@
+package com.example.myapplication
+
+fun main(){
+    val newclass = newclass()
+    println("The square is:" + newclass.sqr(34))
+}
+interface iclass{
+    var operator :String
+    fun sqr(a:Int):Int {
+        return a*a
+    }
+}
+abstract class Abclass{
+    var name : String = "John"
+    abstract var branch :String
+    fun add(a:Int , b:Int):Int{
+        return a+b
+    }
+    abstract fun operate(a:Int , b:Int):Int
+}
+
+class myclass :Abclass(){
+    override var branch: String = "computer"
+    override fun operate(a: Int, b: Int): Int {
+        return a+b
+    }
+}
+class newclass:iclass{
+    override var operator: String = "Add"
+    override fun sqr(a: Int): Int {
+        return a*a*a
+    }
+}
