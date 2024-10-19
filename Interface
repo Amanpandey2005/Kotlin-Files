@@ -1,0 +1,37 @@
+package com.example.myapplication
+
+fun main(){
+    val Aman = Aman()
+    val Kanishka = Kanishka()
+    println("The No is "+ Aman.m1)
+    println("The sum of two no is "+ Aman.add(90,67))
+    println("The sum of three no is "+ Aman.add(23,67,54))
+    println("The sum of two no is :"+ Kanishka.add(34,76,78))
+    println("The sum of three no is"+ Kanishka.add(78,87))
+}
+interface add{
+     var m1 :Int
+     fun add(a:Int , b:Int, c:Int):Int
+
+     fun add(a:Int, b:Int) : Int
+}
+
+class Aman : add{
+    override var m1 = 2000
+    override fun add(a: Int, b: Int):Int {
+        return a+b
+    }
+    override fun add(a: Int, b: Int, c: Int):Int {
+        return a+b+c
+    }
+}
+class Kanishka : add{
+    override var m1 = 2345
+    override fun add(a: Int, b: Int, c: Int): Int {
+        return 3*(a+b+c)
+    }
+
+    override fun add(a: Int, b: Int): Int {
+        return 2*(a+b)
+    }
+}
