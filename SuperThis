@@ -1,0 +1,45 @@
+package com.example.myapplication
+
+fun main(){
+    val audi = audi(770)
+    audi.interior(1234)
+}
+
+ open class car(chasisNo:Int){
+  var manufacturerNo = 1010101010
+
+  init{
+   println("Chasis no is:" + chasisNo)
+  }
+
+  fun pressbrakes():String{
+   println("Car has been stopped Now")
+   return "Brakes pressed!"
+  }
+
+  fun pressacceleration(speed:Int):String{
+   println("The car is at a speed of "+ speed +"km/hr")
+   return "Car has been accelerated!"
+  }
+
+  fun changegear(gearno:Int):String{
+   println("The gear has been shifted to " + gearno + " gearNo")
+   return "Gear Shifted!"
+     }
+ }
+
+class audi(chasisNo:Int):car(chasisNo){
+    var chasisNo = 10000
+
+ init{
+  println("Audi created "+super.manufacturerNo)
+  println("Chasis No is:" + chasisNo)
+  println("Step 1 :" + super.changegear(4))
+  println("step 2 :" + super.pressacceleration(28))
+  println("step 3 :" + super.pressbrakes())
+ }
+
+ fun interior(chasisNo: Int){
+  println("Chasis no is " + this.chasisNo)
+    }
+}
