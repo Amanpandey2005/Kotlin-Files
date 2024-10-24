@@ -1,0 +1,16 @@
+package com.example.myapplication
+
+fun main(){
+    println("The square of 5 is :" + sqr(5))
+    println("The sum of 5 and 6 is :" + sum(5,6))
+    printname()
+}
+
+val sqr : (Int) -> Int = { x -> x*x }
+val sum: (Int, Int) -> Int = { x, y -> x + y }
+val printname : ()-> Unit = {println("Hello , Android Devs")}
+class lambda{
+    fun square(a:Int):Any{
+        return a*a
+    }
+}
