@@ -1,0 +1,18 @@
+package com.example.myapplication
+
+fun main() {
+    val genclass = Genclass(8)
+}
+
+class Genclass<T>(value: T) {
+    init {
+        println("The Value is $value")
+        Check(value)  // Pass value to the generic function
+    }
+}
+
+// Generic function to check any type
+fun <T> Check(text: T) {
+    println("Required Value is $text")
+}
+
