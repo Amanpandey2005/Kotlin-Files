@@ -1,0 +1,21 @@
+package com.example.myapplication
+
+fun main() {
+    // Loop through all enum values and print if they are holidays
+    for (day in Days.values()) {
+        if (day.Holiday) {
+            println("$day is a Holiday")
+        }
+    }
+}
+
+// Enum class for days with an isHoliday property
+enum class Days(var Holiday: Boolean = false) {
+    Sunday(Holiday = true),  // Sunday is a holiday
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday(Holiday = true)  // Saturday is a holiday
+}
