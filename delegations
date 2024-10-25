@@ -1,0 +1,29 @@
+package com.example.myapplication
+
+fun main(){
+    val taskname : String = "download task"
+    val taskmanager = taskmanager(bgtask(taskname), bgexecute(taskname))
+     taskmanager.create()
+     taskmanager.execute()
+}
+
+interface task{
+    fun create()
+}
+
+interface executetask{
+    fun execute()
+}
+class bgtask(val taskname: String ):task{
+    override fun create(){
+        println("task:"+ taskname+ "Created!")
+    }
+}
+class bgexecute(val taskname : String ):executetask{
+    override fun execute(){
+        println("Task:"+ taskname + "is executing")
+    }
+}
+class taskmanager(val creator:task , val executor : executetask): task by creator , executetask by executor{
+
+}
