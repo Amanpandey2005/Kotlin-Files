@@ -1,0 +1,43 @@
+package com.example.myapplication
+
+fun main() {
+    var name: String? = null
+    name?.let {
+        println("The length of name is: " + it.length)
+        println("The name is: " + it)
+        println("The reversed name is: " + it.reversed())
+    }
+
+    // Create a user instance and set properties using apply
+    val user = User().apply {
+        name = "John"
+        age = 25
+        phoneno = "9953306752"
+    }
+
+    // Using `with` to print details and get age as the return value
+    val age = with(user) {
+        println("The name of user is: " + this.name)
+        println("The age of user is: " + this.age)
+        age // Returns age
+    }
+
+    // Using an instance of User with `also`
+    val anotherUser = User().also {
+        it.name = "Harry"
+        println("The name has changed to: " + it.name)
+    }
+
+    // Using `run` to operate on the user instance
+    val msg = user.run {
+        println("The name of user is: " + name)
+        "Run scope function" // Returns this string
+    }
+    println("Message is: " + msg)
+}
+
+class User {
+    var name: String = ""
+    var age: Int = 0
+    var phoneno: String = " "
+}
