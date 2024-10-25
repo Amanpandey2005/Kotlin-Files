@@ -1,0 +1,24 @@
+package com.example.myapplication
+
+fun main(){
+    printme()
+    highorder(printme)
+    highadd(Add)
+}
+val printme = {println("This line has been printed")}
+val Add = {a:Int , b:Int ->a+b}
+val retfunc = {a:Int , b:Int -> "The sum is "+ (a+b)}
+
+fun highorder(func:()-> Unit){
+    func()
+}
+
+fun highadd(addfunc : (Int,Int) -> Int):(Int,Int) -> String{
+    println("The sum is"+addfunc(5,4))
+    return retfunc
+}
+
+class HOF(func : ()-> Unit){
+
+}
+
