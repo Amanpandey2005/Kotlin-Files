@@ -1,0 +1,45 @@
+package com.example.myapplication
+
+class collections{
+    companion object {
+        @JvmStatic
+        fun main(args:Array<String>) {
+            val alist = listOf<Any>("Aman", "9953306752", 45)
+            println(alist)
+
+            val mList = mutableListOf<Any>("Raman", "Rajeev")
+
+            mList.add("Ramiz")
+            mList.add(1)
+
+            val mAList = mutableListOf("Pawan", false)
+
+            mList.addAll(mAList)
+
+            println()
+            println("")
+
+            val aset = setOf<Any>("Aman", "9953306752", 45)
+            println(alist)
+
+            val mset = mutableSetOf<Any>("Raman", "Rajeev")
+
+            mList.add("Ramiz")
+            mList.add(1)
+
+            val mAset = mutableSetOf("Pawan", false)
+
+            mList.addAll(mAList)
+
+            println()
+            println("")
+
+            val amap = mapOf<Any, Any>("Aman" to "9953306752", "Raman" to 45)
+            println(amap)
+            val mmap = mutableMapOf<Any, Any>("Hrithik" to "9953306752", "Raman" to 45)
+            val mMap = mutableMapOf<Any, Any>(1 to "Pawan", "Raan" to 48)
+            mmap.putAll(mMap)
+            println(mmap)
+        }
+    }
+}
