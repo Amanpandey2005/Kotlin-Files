@@ -16,7 +16,7 @@ fun main(){
      }
 }
   class ClassC:ClassB(){
-    override var name : String = "Kanishka"
+    override var name : String = "Aman"
     override fun add(a:Int , b:Int):Int{
         val sum = super.add(5,6)
         val sqr = sum *sum
