@@ -11,7 +11,7 @@ public open class ClassA(a:Int){
     // primary constructor
 
     init {
-        println("my wife is the wisest thing in my life that i ever do")
+        println("The wisest thing in my life that i ever do")
         println("value of a is" + a)
     }
 
